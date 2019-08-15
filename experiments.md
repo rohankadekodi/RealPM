@@ -10,12 +10,8 @@ We evaluate and benchmark on SplitFS using different application benchmarks like
 
 1. kernel: `cd scripts/kernel-setup; ./compile_kernel.sh; cd ..` -- This will compile the Linux 4.13.0 kernel along with loadable modules for NOVA and PMFS. It will also install the kernel after compiling. Run with `sudo` 
 2. PM Emulation: 
-    * Open `/etc/default/grub`
-    * add `GRUB_CMDLINE_LINUX="memmap=24G!4G nokaslr"`
-    * Close file
-    * `$ sudo update-grub && sudo update-grub2`
     * Reboot system
-    * Run `uname -r` to ensure that system is booted with 4.13.0 kernel, and ensure that `/dev/pmem0` exists
+    * Run `uname -r` to ensure that system is booted with 4.13.0 kernel, and ensure that `/dev/pmem12` exists
     * `$ mkdir /mnt/pmem_emul`
 3. SplitFS: `cd scripts/splitfs-setup; ./compile_splitfs.sh; cd ../..` -- This will compile splitfs strict
 4. LevelDB: `cd scripts/ycsb; ./compile_leveldb.sh; cd ../..` -- This will compile LevelDB
@@ -38,9 +34,7 @@ Note: The <num_threads> argument in the compilation scripts performs the compila
 
 ### Run Workloads
 
-1. YCSB: `cd scripts/ycsb; ./run_ycsb.sh; cd ../..` -- This will run all the YCSB workloads on LevelDB (Load A, Run A-F, Load E, Run E) with `ext4-DAX, NOVA strict, NOVA Relaxed, PMFS, SplitFS-strict` 
-2. TPCC: `cd scripts/tpcc; ./run_tpcc.sh; cd ../..` -- This will run the TPCC workload on SQLite3 with `ext4-DAX, NOVA strict, NOVA Relaxed, PMFS, SplitFS-POSIX`
-3. rsync: `cd scripts/rsync; ./run_rsync.sh; cd ../..` -- This will run the rsync workload with `ext4-DAX, NOVA strict, NOVA Relaxed, PMFS, SplitFS-sync`
+`cd scripts; ./all_run.sh; cd ..`
 
 ---
 

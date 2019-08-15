@@ -31,10 +31,8 @@ run_tpcc nova
 sudo $setup_dir/dax_config.sh
 run_tpcc boost
 
-:'
 sudo $setup_dir/dax_config.sh
-run_tpcc_boost sync_boost
+run_tpcc sync_boost
 
 sudo $setup_dir/dax_config.sh
-run_tpcc_boost posix_boost
-'
+run_tpcc posix_boost

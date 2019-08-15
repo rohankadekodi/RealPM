@@ -31,10 +31,8 @@ run_rsync pmfs
 sudo $setup_dir/dax_config.sh
 run_rsync boost
 
-:'
 sudo $setup_dir/dax_config.sh
 run_rsync sync_boost
 
 sudo $setup_dir/dax_config.sh
 run_rsync posix_boost
-'

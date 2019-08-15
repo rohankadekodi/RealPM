@@ -5,4 +5,4 @@ sudo rmmod nova
 sudo modprobe nova
 #sudo modprobe nova measure_timing=1 inplace_data_updates=1
 #sudo modprobe nova inplace_data_updates=1
-sudo mount -t NOVA -o init /dev/pmem0 /mnt/pmem_emul
+sudo mount -t NOVA -o init /dev/pmem12 /mnt/pmem_emul

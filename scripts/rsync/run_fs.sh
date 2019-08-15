@@ -21,10 +21,13 @@ fs_results=$result_dir/$fs/$workload
 
 if [ "$fs" == "boost" ]; then
     run_boost=1
+    mode=strict
 elif [ "$fs" == "sync_boost" ]; then
     run_boost=1
+    mode=sync
 elif [ "$fs" == "posix_boost" ]; then
     run_boost=1
+    mode=posix
 else
     run_boost=0
 fi
@@ -49,7 +52,7 @@ run_workload()
     mkdir dest
 
     if [ $run_boost -eq 1 ]; then
-        export LD_LIBRARY_PATH=$src_dir/splitfs-so/rsync/sync
+        export LD_LIBRARY_PATH=$src_dir/splitfs-so/rsync/$mode
         export NVP_TREE_FILE=$boost_dir/bin/nvp_nvp.tree
     fi
 
@@ -58,7 +61,7 @@ run_workload()
     date
 
     if [ $run_boost -eq 1 ]; then
-        ( time LD_PRELOAD=$src_dir/splitfs-so/rsync/sync/libnvp.so $rsync_dir/rsync -Wr ./src dest/ ) 2>&1 | tee $fs_results/run$run_id
+        ( time LD_PRELOAD=$src_dir/splitfs-so/rsync/$mode/libnvp.so $rsync_dir/rsync -Wr ./src dest/ ) 2>&1 | tee $fs_results/run$run_id
     else
         ( time $rsync_dir/rsync -Wr ./src dest/ ) 2>&1 | tee $fs_results/run$run_id
     fi

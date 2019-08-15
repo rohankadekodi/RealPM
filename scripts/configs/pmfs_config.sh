@@ -3,4 +3,4 @@ sudo rm -rf /mnt/pmem_emul/*
 sudo umount /mnt/pmem_emul
 sudo rmmod pmfs
 sudo modprobe pmfs
-sudo mount -t pmfs -o init /dev/pmem0 /mnt/pmem_emul
+sudo mount -t pmfs -o init /dev/pmem12 /mnt/pmem_emul

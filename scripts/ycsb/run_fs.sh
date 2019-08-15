@@ -23,10 +23,13 @@ boost_dir=$src_dir/splitfs
 
 if [ "$fs" == "boost" ]; then
     run_boost=1
+    mode=strict
 elif [ "$fs" == "sync_boost" ]; then
     run_boost=1
+    mode=sync
 elif [ "$fs" == "posix_boost" ]; then
     run_boost=1
+    mode=posix
 else
     run_boost=0
 fi
@@ -53,14 +56,14 @@ load_workload()
     rm $fs_results/run$run_id
 
     if [ $run_boost -eq 1 ]; then
-        export LD_LIBRARY_PATH=$src_dir/splitfs-so/ycsb/strict
+        export LD_LIBRARY_PATH=$src_dir/splitfs-so/ycsb/$mode
         export NVP_TREE_FILE=$boost_dir/bin/nvp_nvp.tree
     fi
 
     date
 
     if [ $run_boost -eq 1 ]; then
-        LD_PRELOAD=$src_dir/splitfs-so/ycsb/strict/libnvp.so $leveldb_build_dir/db_bench --use_existing_db=0 --benchmarks=ycsb,stats,printdb --db=$database_dir --threads=1 --open_files=1000 2>&1 | tee $fs_results/run$run_id
+        LD_PRELOAD=$src_dir/splitfs-so/ycsb/$mode/libnvp.so $leveldb_build_dir/db_bench --use_existing_db=0 --benchmarks=ycsb,stats,printdb --db=$database_dir --threads=1 --open_files=1000 2>&1 | tee $fs_results/run$run_id
     else
         $leveldb_build_dir/db_bench --use_existing_db=0 --benchmarks=ycsb,stats,printdb --db=$database_dir --threads=1 --open_files=1000 2>&1 | tee $fs_results/run$run_id
     fi
@@ -86,14 +89,14 @@ run_workload()
     rm $fs_results/run$run_id
 
     if [ $run_boost -eq 1 ]; then
-        export LD_LIBRARY_PATH=$src_dir/splitfs-so/ycsb/strict
+        export LD_LIBRARY_PATH=$src_dir/splitfs-so/ycsb/$mode
         export NVP_TREE_FILE=$boost_dir/bin/nvp_nvp.tree
     fi
 
     date
     
     if [ $run_boost -eq 1 ]; then
-        LD_PRELOAD=$src_dir/splitfs-so/ycsb/strict/libnvp.so $leveldb_build_dir/db_bench --use_existing_db=1 --benchmarks=ycsb,stats,printdb --db=$database_dir --threads=1 --open_files=1000 2>&1 | tee $fs_results/run$run_id
+        LD_PRELOAD=$src_dir/splitfs-so/ycsb/$mode/libnvp.so $leveldb_build_dir/db_bench --use_existing_db=1 --benchmarks=ycsb,stats,printdb --db=$database_dir --threads=1 --open_files=1000 2>&1 | tee $fs_results/run$run_id
     else
         $leveldb_build_dir/db_bench --use_existing_db=1 --benchmarks=ycsb,stats,printdb --db=$database_dir --threads=1 --open_files=1000 2>&1 | tee $fs_results/run$run_id
     fi
