@@ -16,6 +16,7 @@ run_tpcc()
     done
 }
 
+:'
 sudo $setup_dir/dax_config.sh
 run_tpcc dax
 
@@ -27,6 +28,7 @@ run_tpcc pmfs
 
 sudo $setup_dir/nova_config.sh
 run_tpcc nova
+'
 
 sudo $setup_dir/dax_config.sh
 run_tpcc boost

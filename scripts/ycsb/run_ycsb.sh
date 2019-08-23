@@ -30,6 +30,7 @@ run_ycsb()
     done
 }
 
+:'
 sudo $setup_dir/dax_config.sh
 run_ycsb dax
 
@@ -41,6 +42,7 @@ run_ycsb pmfs
 
 sudo $setup_dir/nova_config.sh
 run_ycsb nova
+'
 
 sudo $setup_dir/dax_config.sh
 run_ycsb boost
