@@ -1,0 +1,291 @@
+Script started on Sat 10 Nov 2018 01:49:41 PM CST
+]0;rohan@pune-lom: ~/projects/redis-4.0.10/src[01;32mrohan@pune-lom[00m:[01;34m~/projects/redis-4.0.10/src[00m$ exitsudo ./redis-server ../redis.confemacs -nw[K[2Pcd src/projects/redis-4.0.10/sudo git push origin redis_final_pipes "[Ksudo git commit -m "working with redis. Perforrmance not tested yet.[A]0;rohan@pune-lom: ~/projects/redis-4.0.10/src[01;32mrohan@pune-lom[00m:[01;34m~/projects/redis-4.0.10/src[00m$ [C[C[C[C[C[C[C[C[Cadd .[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[Cstatussudo emacs -nwcd projects/quill-modified/sudo ./redis-server ../redis.confrm -rf /mnt/pmem_emul/* && sync/home/rohan/projects/quill-modified/run_qquill.sh -p /home/rohan/projects/quill-modified/ -t nvp_nvp.tree ./redis-server ../redis.cconf[A[A]0;rohan@pune-lom: ~/projects/redis-4.0.10/src[01;32mrohan@pune-lom[00m:[01;34m~/projects/redis-4.0.10/src[00m$ [C[C[C[C[C[9Prm -rf /mnt/pmem_emul/* && sync
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pcd projects/redis-4.0.10/src/sudo rm -rf /mnt/pmem_emul/* && sync/home/rohan/projects/quill-modified/run_qquill.sh -p /home/rohan/projects/quill-modified/ -t nvp_nvp.tree ./redis-server ../redis.cconf
+[sudo] password for rohan: 
+Rohan here
+Quill path = /home/rohan/projects/quill-modified/
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+NVP_MSG (23258): Initializing the libnvp hub.  If you're reading this, the library is being loaded! (this is PID 23258, my parent is 23257)
+NVP_MSG (23258): Call tree will be parsed from /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+function name = open
+function name = fork
+function name = fopen64
+function name = execve
+function name = execvp
+function name = execv
+function name = execl
+function name = fcntl
+function name = poll
+function name = ioctl
+function name = epoll_create
+function name = epoll_ctl
+function name = epoll_wait
+function name = read
+function name = fread
+function name = write
+function name = fwrite
+function name = fseek
+function name = ftell
+function name = ftello
+function name = close
+function name = fclose
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite64
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_init2: END
+_nvp_FREAD: start
+_nvp_FREAD: start
+_nvp_FREAD: start
+23258:C 10 Nov 13:49:48.699 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+23258:C 10 Nov 13:49:48.699 # Redis version=4.0.10, bits=64, commit=194d7fea, modified=1, pid=23258, just started
+23258:C 10 Nov 13:49:48.699 # Configuration loaded
+23258:M 10 Nov 13:49:48.700 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+NVP_MSG (23258): File /var/run/redis_6379.pid is opened O_WRONLY.
+NVP_MSG (23258): Does not support mmap, use posix instead.
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 4.0.10 (194d7fea/1) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 0
+ |    `-._   `._    /     _.-'    |     PID: 23258
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+23258:M 10 Nov 13:49:48.700 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+23258:M 10 Nov 13:49:48.700 # Server initialized
+23258:M 10 Nov 13:49:48.700 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+NVP_MSG (23258): A Posix Path: /sys/kernel/mm/transparent_hugepage/enabled
+23258:M 10 Nov 13:49:48.700 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+23258:M 10 Nov 13:49:48.700 * The server is now ready to accept connections at /tmp/redis.sock
+23258:M 10 Nov 13:49:51.204 * Starting automatic rewriting of AOF on 7786170600% growth
+23258:M 10 Nov 13:49:51.205 * Background append only file rewriting started by pid 23264
+NVP_MSG (23264): File temp-rewriteaof-23264.aof is opened O_WRONLY.
+NVP_MSG (23264): Does not support mmap, use posix instead.
+aofReadDiffFromParent: total data read = 8575
+aofReadDiffFromParent: total data read = 2138
+23258:M 10 Nov 13:49:51.205 * AOF rewrite child asks to stop sending diffs.
+23264:C 10 Nov 13:49:51.205 * Parent agreed to stop sending diffs. Finalizing AOF...
+aofReadDiffFromParent: total data read = 0
+23264:C 10 Nov 13:49:51.205 * Concatenating 0.01 MB of AOF diff received from parent.
+23264:C 10 Nov 13:49:51.205 * SYNC append only file rewrite performed
+23264:C 10 Nov 13:49:51.206 * AOF rewrite: 0 MB of memory used by copy-on-write
+23258:M 10 Nov 13:49:51.305 * Background AOF rewrite terminated with success
+23258:M 10 Nov 13:49:51.309 * Residual parent diff successfully flushed to the rewritten AOF (11.00 MB)
+23258:M 10 Nov 13:49:51.309 * Background AOF rewrite finished successfully
+23258:M 10 Nov 13:49:51.919 * Starting automatic rewriting of AOF on 620862% growth
+23258:M 10 Nov 13:49:51.920 * Background append only file rewriting started by pid 23265
+NVP_MSG (23265): File temp-rewriteaof-23265.aof is opened O_WRONLY.
+NVP_MSG (23265): Does not support mmap, use posix instead.
+aofReadDiffFromParent: total data read = 8575
+aofReadDiffFromParent: total data read = 2138
+23258:M 10 Nov 13:49:51.920 * AOF rewrite child asks to stop sending diffs.
+23265:C 10 Nov 13:49:51.920 * Parent agreed to stop sending diffs. Finalizing AOF...
+aofReadDiffFromParent: total data read = 0
+23265:C 10 Nov 13:49:51.920 * Concatenating 0.01 MB of AOF diff received from parent.
+23265:C 10 Nov 13:49:51.920 * SYNC append only file rewrite performed
+23265:C 10 Nov 13:49:51.921 * AOF rewrite: 0 MB of memory used by copy-on-write
+23258:M 10 Nov 13:49:52.020 * Background AOF rewrite terminated with success
+23258:M 10 Nov 13:49:52.024 * Residual parent diff successfully flushed to the rewritten AOF (10.51 MB)
+23258:M 10 Nov 13:49:52.024 * Background AOF rewrite finished successfully
+23258:M 10 Nov 13:49:52.624 * Starting automatic rewriting of AOF on 620952% growth
+23258:M 10 Nov 13:49:52.624 * Background append only file rewriting started by pid 23266
+NVP_MSG (23266): File temp-rewriteaof-23266.aof is opened O_WRONLY.
+NVP_MSG (23266): Does not support mmap, use posix instead.
+aofReadDiffFromParent: total data read = 6437
+23258:M 10 Nov 13:49:52.625 * AOF rewrite child asks to stop sending diffs.
+23266:C 10 Nov 13:49:52.625 * Parent agreed to stop sending diffs. Finalizing AOF...
+aofReadDiffFromParent: total data read = 0
+23266:C 10 Nov 13:49:52.625 * Concatenating 0.01 MB of AOF diff received from parent.
+23266:C 10 Nov 13:49:52.625 * SYNC append only file rewrite performed
+23266:C 10 Nov 13:49:52.626 * AOF rewrite: 0 MB of memory used by copy-on-write
+23258:M 10 Nov 13:49:52.725 * Background AOF rewrite terminated with success
+23258:M 10 Nov 13:49:52.726 * Residual parent diff successfully flushed to the rewritten AOF (11.01 MB)
+23258:M 10 Nov 13:49:52.726 * Background AOF rewrite finished successfully
+23258:M 10 Nov 13:49:53.336 * Starting automatic rewriting of AOF on 969284% growth
+23258:M 10 Nov 13:49:53.337 * Background append only file rewriting started by pid 23267
+NVP_MSG (23267): File temp-rewriteaof-23267.aof is opened O_WRONLY.
+NVP_MSG (23267): Does not support mmap, use posix instead.
+aofReadDiffFromParent: total data read = 4299
+aofReadDiffFromParent: total data read = 2138
+23258:M 10 Nov 13:49:53.337 * AOF rewrite child asks to stop sending diffs.
+23267:C 10 Nov 13:49:53.337 * Parent agreed to stop sending diffs. Finalizing AOF...
+aofReadDiffFromParent: total data read = 0
+23267:C 10 Nov 13:49:53.337 * Concatenating 0.01 MB of AOF diff received from parent.
+23267:C 10 Nov 13:49:53.337 * SYNC append only file rewrite performed
+23267:C 10 Nov 13:49:53.338 * AOF rewrite: 1 MB of memory used by copy-on-write
+23258:M 10 Nov 13:49:53.437 * Background AOF rewrite terminated with success
+23258:M 10 Nov 13:49:53.437 * Residual parent diff successfully flushed to the rewritten AOF (10.60 MB)
+23258:M 10 Nov 13:49:53.438 * Background AOF rewrite finished successfully
+23258:M 10 Nov 13:49:54.038 * Starting automatic rewriting of AOF on 986876% growth
+23258:M 10 Nov 13:49:54.038 * Background append only file rewriting started by pid 23268
+NVP_MSG (23268): File temp-rewriteaof-23268.aof is opened O_WRONLY.
+NVP_MSG (23268): Does not support mmap, use posix instead.
+23258:M 10 Nov 13:49:54.044 * AOF rewrite child asks to stop sending diffs.
+23268:C 10 Nov 13:49:54.044 * Parent agreed to stop sending diffs. Finalizing AOF...
+aofReadDiffFromParent: total data read = 0
+23268:C 10 Nov 13:49:54.044 * Concatenating 0.00 MB of AOF diff received from parent.
+23268:C 10 Nov 13:49:54.044 * SYNC append only file rewrite performed
+23268:C 10 Nov 13:49:54.045 * AOF rewrite: 0 MB of memory used by copy-on-write
+23258:M 10 Nov 13:49:54.139 * Background AOF rewrite terminated with success
+23258:M 10 Nov 13:49:54.139 * Residual parent diff successfully flushed to the rewritten AOF (9.91 MB)
+23258:M 10 Nov 13:49:54.139 * Background AOF rewrite finished successfully
+23258:M 10 Nov 13:49:54.740 * Starting automatic rewriting of AOF on 6778754% growth
+23258:M 10 Nov 13:49:54.741 * Background append only file rewriting started by pid 23269
+NVP_MSG (23269): File temp-rewriteaof-23269.aof is opened O_WRONLY.
+NVP_MSG (23269): Does not support mmap, use posix instead.
+aofReadDiffFromParent: total data read = 6437
+23258:M 10 Nov 13:49:54.741 * AOF rewrite child asks to stop sending diffs.
+23269:C 10 Nov 13:49:54.741 * Parent agreed to stop sending diffs. Finalizing AOF...
+aofReadDiffFromParent: total data read = 0
+23269:C 10 Nov 13:49:54.741 * Concatenating 0.01 MB of AOF diff received from parent.
+23269:C 10 Nov 13:49:54.741 * SYNC append only file rewrite performed
+23269:C 10 Nov 13:49:54.742 * AOF rewrite: 1 MB of memory used by copy-on-write
+23258:M 10 Nov 13:49:54.841 * Background AOF rewrite terminated with success
+23258:M 10 Nov 13:49:54.845 * Residual parent diff successfully flushed to the rewritten AOF (10.82 MB)
+23258:M 10 Nov 13:49:54.845 * Background AOF rewrite finished successfully
+23258:M 10 Nov 13:49:55.445 * Starting automatic rewriting of AOF on 958465% growth
+23258:M 10 Nov 13:49:55.446 * Background append only file rewriting started by pid 23270
+NVP_MSG (23270): File temp-rewriteaof-23270.aof is opened O_WRONLY.
+NVP_MSG (23270): Does not support mmap, use posix instead.
+aofReadDiffFromParent: total data read = 6437
+aofReadDiffFromParent: total data read = 2138
+23258:M 10 Nov 13:49:55.446 * AOF rewrite child asks to stop sending diffs.
+23270:C 10 Nov 13:49:55.446 * Parent agreed to stop sending diffs. Finalizing AOF...
+aofReadDiffFromParent: total data read = 0
+23270:C 10 Nov 13:49:55.446 * Concatenating 0.01 MB of AOF diff received from parent.
+23270:C 10 Nov 13:49:55.446 * SYNC append only file rewrite performed
+23270:C 10 Nov 13:49:55.447 * AOF rewrite: 1 MB of memory used by copy-on-write
+23258:M 10 Nov 13:49:55.546 * Background AOF rewrite terminated with success
+23258:M 10 Nov 13:49:55.546 * Residual parent diff successfully flushed to the rewritten AOF (10.92 MB)
+23258:M 10 Nov 13:49:55.547 * Background AOF rewrite finished successfully
+23258:M 10 Nov 13:49:56.147 * Starting automatic rewriting of AOF on 762266% growth
+23258:M 10 Nov 13:49:56.148 * Background append only file rewriting started by pid 23271
+NVP_MSG (23271): File temp-rewriteaof-23271.aof is opened O_WRONLY.
+NVP_MSG (23271): Does not support mmap, use posix instead.
+aofReadDiffFromParent: total data read = 10713
+23258:M 10 Nov 13:49:56.148 * AOF rewrite child asks to stop sending diffs.
+23271:C 10 Nov 13:49:56.148 * Parent agreed to stop sending diffs. Finalizing AOF...
+aofReadDiffFromParent: total data read = 0
+23271:C 10 Nov 13:49:56.148 * Concatenating 0.01 MB of AOF diff received from parent.
+23271:C 10 Nov 13:49:56.148 * SYNC append only file rewrite performed
+23271:C 10 Nov 13:49:56.149 * AOF rewrite: 0 MB of memory used by copy-on-write
+23258:M 10 Nov 13:49:56.248 * Background AOF rewrite terminated with success
+23258:M 10 Nov 13:49:56.249 * Residual parent diff successfully flushed to the rewritten AOF (10.97 MB)
+23258:M 10 Nov 13:49:56.249 * Background AOF rewrite finished successfully
+23258:M 10 Nov 13:49:56.849 * Starting automatic rewriting of AOF on 625009% growth
+23258:M 10 Nov 13:49:56.850 * Background append only file rewriting started by pid 23272
+NVP_MSG (23272): File temp-rewriteaof-23272.aof is opened O_WRONLY.
+NVP_MSG (23272): Does not support mmap, use posix instead.
+aofReadDiffFromParent: total data read = 6437
+23258:M 10 Nov 13:49:56.850 * AOF rewrite child asks to stop sending diffs.
+23272:C 10 Nov 13:49:56.850 * Parent agreed to stop sending diffs. Finalizing AOF...
+aofReadDiffFromParent: total data read = 0
+23272:C 10 Nov 13:49:56.850 * Concatenating 0.01 MB of AOF diff received from parent.
+23272:C 10 Nov 13:49:56.850 * SYNC append only file rewrite performed
+23272:C 10 Nov 13:49:56.851 * AOF rewrite: 1 MB of memory used by copy-on-write
+23258:M 10 Nov 13:49:56.950 * Background AOF rewrite terminated with success
+23258:M 10 Nov 13:49:56.951 * Residual parent diff successfully flushed to the rewritten AOF (11.25 MB)
+23258:M 10 Nov 13:49:56.951 * Background AOF rewrite finished successfully
+23258:M 10 Nov 13:49:57.551 * Starting automatic rewriting of AOF on 988381% growth
+23258:M 10 Nov 13:49:57.552 * Background append only file rewriting started by pid 23273
+NVP_MSG (23273): File temp-rewriteaof-23273.aof is opened O_WRONLY.
+NVP_MSG (23273): Does not support mmap, use posix instead.
+aofReadDiffFromParent: total data read = 6437
+aofReadDiffFromParent: total data read = 2138
+23258:M 10 Nov 13:49:57.552 * AOF rewrite child asks to stop sending diffs.
+23273:C 10 Nov 13:49:57.552 * Parent agreed to stop sending diffs. Finalizing AOF...
+aofReadDiffFromParent: total data read = 0
+23273:C 10 Nov 13:49:57.552 * Concatenating 0.01 MB of AOF diff received from parent.
+23273:C 10 Nov 13:49:57.552 * SYNC append only file rewrite performed
+23273:C 10 Nov 13:49:57.553 * AOF rewrite: 0 MB of memory used by copy-on-write
+23258:M 10 Nov 13:49:57.652 * Background AOF rewrite terminated with success
+23258:M 10 Nov 13:49:57.652 * Residual parent diff successfully flushed to the rewritten AOF (10.96 MB)
+23258:M 10 Nov 13:49:57.653 * Background AOF rewrite finished successfully
+23258:M 10 Nov 13:49:58.253 * Starting automatic rewriting of AOF on 768492% growth
+23258:M 10 Nov 13:49:58.254 * Background append only file rewriting started by pid 23274
+NVP_MSG (23274): File temp-rewriteaof-23274.aof is opened O_WRONLY.
+NVP_MSG (23274): Does not support mmap, use posix instead.
+aofReadDiffFromParent: total data read = 6437
+23258:M 10 Nov 13:49:58.254 * AOF rewrite child asks to stop sending diffs.
+23274:C 10 Nov 13:49:58.254 * Parent agreed to stop sending diffs. Finalizing AOF...
+aofReadDiffFromParent: total data read = 2138
+23274:C 10 Nov 13:49:58.254 * Concatenating 0.01 MB of AOF diff received from parent.
+23274:C 10 Nov 13:49:58.254 * SYNC append only file rewrite performed
+23274:C 10 Nov 13:49:58.255 * AOF rewrite: 0 MB of memory used by copy-on-write
+23258:M 10 Nov 13:49:58.354 * Background AOF rewrite terminated with success
+23258:M 10 Nov 13:49:58.355 * Residual parent diff successfully flushed to the rewritten AOF (10.89 MB)
+23258:M 10 Nov 13:49:58.355 * Background AOF rewrite finished successfully
+23258:M 10 Nov 13:49:58.955 * Starting automatic rewriting of AOF on 762123% growth
+23258:M 10 Nov 13:49:58.956 * Background append only file rewriting started by pid 23275
+NVP_MSG (23275): File temp-rewriteaof-23275.aof is opened O_WRONLY.
+NVP_MSG (23275): Does not support mmap, use posix instead.
+aofReadDiffFromParent: total data read = 8575
+aofReadDiffFromParent: total data read = 2138
+23258:M 10 Nov 13:49:58.956 * AOF rewrite child asks to stop sending diffs.
+23275:C 10 Nov 13:49:58.956 * Parent agreed to stop sending diffs. Finalizing AOF...
+aofReadDiffFromParent: total data read = 0
+23275:C 10 Nov 13:49:58.956 * Concatenating 0.01 MB of AOF diff received from parent.
+23275:C 10 Nov 13:49:58.956 * SYNC append only file rewrite performed
+23275:C 10 Nov 13:49:58.957 * AOF rewrite: 0 MB of memory used by copy-on-write
+23258:M 10 Nov 13:49:59.056 * Background AOF rewrite terminated with success
+23258:M 10 Nov 13:49:59.056 * Residual parent diff successfully flushed to the rewritten AOF (10.95 MB)
+23258:M 10 Nov 13:49:59.057 * Background AOF rewrite finished successfully
+^C23258:M 10 Nov 13:50:03.963 # User requested shutdown...
+23258:M 10 Nov 13:50:03.963 * Calling fsync() on the AOF file.
+23258:M 10 Nov 13:50:03.978 * Saving the final RDB snapshot before exiting.
+23258:M 10 Nov 13:50:03.979 * DB saved on disk
+23258:M 10 Nov 13:50:03.979 * Removing the pid file.
+23258:M 10 Nov 13:50:03.979 * Removing the unix socket file.
+23258:M 10 Nov 13:50:03.979 # Redis is now ready to exit, bye bye...
+NVP_MSG (23258): exit handler
+NVP_MSG (23258): Exit: print stats
+====================== NVP IO stats: ======================
+open 176, close 175, async close 0
+mmap 11, unlink 15, stat 15
+fsync 24, appendfsync: count 91 size 1205088712 average 13242733
+READ: count 1000268, size 0, average 0
+WRITE: count 984248, size 1205088712, average 1224
+memcpy READ: count 0, size 0, average 0
+memcpy WRITE: count 984246, size 1205088712, average 1224
+posix READ: count 0, size 0, average 0
+posix WRITE: count 0, size 0, average 0
+write extends 984191, total 984191
+MFENCE: count 182
+CLFLUSHOPT: count 0
+NON_TEMPORAL_WRITES: count 91, size 1205088712, average 13242733
+TEMPORAL WRITES: count 0, size 0, average 0
+TOTAL SYSCALLS (open + close + read + write + fsync): count 351
+NVP_MSG (23258): calling cleanup
+starting cleanup..
+nvp_cleanup: cleaning ino mapping
+cleanup complete..
+]0;rohan@pune-lom: ~/projects/redis-4.0.10/src[01;32mrohan@pune-lom[00m:[01;34m~/projects/redis-4.0.10/src[00m$ exit
+exit
+
+Script done on Sat 10 Nov 2018 01:50:07 PM CST

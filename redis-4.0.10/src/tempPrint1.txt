@@ -1,0 +1,287 @@
+Rohan here
+Quill path = /home/rohan/projects/quill-modified/
+tree = /home/rohan/projects/quill-modified/bin/nvp_nvp.tree
+_hub_init2: START
+_nvp_init2: initialized environment, OPEN_MAX = 1024
+function name = open
+function name = ioctl
+function name = fopen
+function name = read
+function name = fread
+function name = write
+function name = fwrite
+function name = close
+function name = fclose
+function name = lseek
+function name = ftruncate
+function name = dup
+function name = dup2
+function name = fork
+function name = readv
+function name = writev
+function name = pipe
+function name = ftruncate64
+function name = lseek64
+function name = pread
+function name = pwrite
+function name = fsync
+function name = fdatasync
+function name = socket
+function name = accept
+function name = unlink
+function name = unlinkat
+_hub_resolve_all_fileops: here
+_hub_OPEN: START
+_hub_init2: END
+14238:C 15 Aug 12:13:15.442 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+14238:C 15 Aug 12:13:15.442 # Redis version=4.0.10, bits=64, commit=00000000, modified=0, pid=14238, just started
+14238:C 15 Aug 12:13:15.442 # Warning: no config file specified, using the default config. In order to specify a config file use ./redis-server /path/to/redis.conf
+14238:M 15 Aug 12:13:15.443 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+14238:M 15 Aug 12:13:15.443 * Running mode=standalone, port=6379.
+14238:M 15 Aug 12:13:15.443 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+14238:M 15 Aug 12:13:15.443 # Server initialized
+14238:M 15 Aug 12:13:15.443 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+14238:M 15 Aug 12:13:15.443 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+14238:M 15 Aug 12:13:16.536 * DB loaded from disk: 1.093 seconds
+14238:M 15 Aug 12:13:16.536 * Ready to accept connections
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START
+_hub_OPEN: START

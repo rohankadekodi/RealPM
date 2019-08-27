@@ -16,6 +16,9 @@ sqlite3-trace/.libs
 rsync/workload/
 rsync/rsync
 
+tar/workload/*
+git/workload/*
+
 !ycsb/core
 !ycsb/tracerecorder
 !kernel/kbuild/Makefile.setup
