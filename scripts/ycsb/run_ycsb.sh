@@ -8,7 +8,7 @@ pmem_dir=/mnt/pmem_emul
 run_ycsb()
 {
     fs=$1
-    for run in 1
+    for run in 2 3 4
     do
         sudo rm -rf $pmem_dir/*
         sudo taskset -c 0-7 ./run_fs.sh LoadA $fs $run
@@ -30,7 +30,15 @@ run_ycsb()
     done
 }
 
-:'
+sudo $setup_dir/dax_config.sh
+run_ycsb posix_boost
+
+sudo $setup_dir/dax_config.sh
+run_ycsb sync_boost
+
+sudo $setup_dir/dax_config.sh
+run_ycsb boost
+
 sudo $setup_dir/dax_config.sh
 run_ycsb dax
 
@@ -42,13 +50,3 @@ run_ycsb pmfs
 
 sudo $setup_dir/nova_config.sh
 run_ycsb nova
-'
-
-sudo $setup_dir/dax_config.sh
-run_ycsb boost
-
-sudo $setup_dir/dax_config.sh
-run_ycsb sync_boost
-
-sudo $setup_dir/dax_config.sh
-run_ycsb posix_boost
