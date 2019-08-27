@@ -19,8 +19,8 @@ DATADIR := $(DESTDIR)/usr/local/share
 MANDIR := $(DESTDIR)/usr/local/share/man
 srcroot := 
 objroot := 
-abs_srcroot := /home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/
-abs_objroot := /home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/
+abs_srcroot := /home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/
+abs_objroot := /home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/
 
 # Build parameters.
 CPPFLAGS :=  -D_GNU_SOURCE -D_REENTRANT -I$(srcroot)include -I$(objroot)include
