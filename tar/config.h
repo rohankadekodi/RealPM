@@ -1650,7 +1650,7 @@
 #define HAVE_RAW_DECL_READLINKAT 1
 
 /* Define to 1 if reallocarray is declared even after undefining macros. */
-/* #undef HAVE_RAW_DECL_REALLOCARRAY */
+#define HAVE_RAW_DECL_REALLOCARRAY 1
 
 /* Define to 1 if realpath is declared even after undefining macros. */
 #define HAVE_RAW_DECL_REALPATH 1
@@ -1980,13 +1980,13 @@
 #define HAVE_SEARCH_H 1
 
 /* Define to 1 if you have the <selinux/context.h> header file. */
-#define HAVE_SELINUX_CONTEXT_H 1
+/* #undef HAVE_SELINUX_CONTEXT_H */
 
 /* Define to 1 if you have the <selinux/flask.h> header file. */
 #define HAVE_SELINUX_FLASK_H 1
 
 /* Define to 1 if you have the <selinux/selinux.h> header file. */
-#define HAVE_SELINUX_SELINUX_H 1
+#define HAVE_SELINUX_SELINUX_H 0
 
 /* Define to 1 if you have the `setdtablesize' function. */
 /* #undef HAVE_SETDTABLESIZE */
@@ -2315,7 +2315,7 @@
 #define HAVE_XATTRS /**/
 
 /* Define to 1 if you have the <xlocale.h> header file. */
-#define HAVE_XLOCALE_H 1
+/* #undef HAVE_XLOCALE_H */
 
 /* Define to 1 if the system has the type `_Bool'. */
 #define HAVE__BOOL 1
@@ -2499,7 +2499,7 @@
 /* #undef REPLACE_FUNC_STAT_FILE */
 
 /* Define if nl_langinfo exists but is overridden by gnulib. */
-#define REPLACE_NL_LANGINFO 1
+/* #undef REPLACE_NL_LANGINFO */
 
 /* Define to 1 if open() should work around the inability to open a directory.
    */
@@ -2835,13 +2835,13 @@
 #endif
 
 /* Always use our fgetfilecon wrapper. */
-#define fgetfilecon rpl_fgetfilecon
+/* #undef fgetfilecon */
 
 /* Define to a replacement function name for fnmatch(). */
 /* #undef fnmatch */
 
 /* Always use our getfilecon wrapper. */
-#define getfilecon rpl_getfilecon
+/* #undef getfilecon */
 
 /* Define to `int' if <sys/types.h> doesn't define. */
 /* #undef gid_t */
@@ -2875,7 +2875,7 @@
 #endif
 
 /* Always use our lgetfilecon wrapper. */
-#define lgetfilecon rpl_lgetfilecon
+/* #undef lgetfilecon */
 
 /* Define to 1 if the compiler is checking for lint. */
 /* #undef lint */

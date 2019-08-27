@@ -1,5 +1,5 @@
 xasprintf.o: xasprintf.c /usr/include/stdc-predef.h ../config.h \
- xvasprintf.h /usr/lib/gcc/x86_64-linux-gnu/5/include/stdarg.h
+ xvasprintf.h /usr/lib/gcc/x86_64-linux-gnu/7/include/stdarg.h
 
 /usr/include/stdc-predef.h:
 
@@ -7,4 +7,4 @@ xasprintf.o: xasprintf.c /usr/include/stdc-predef.h ../config.h \
 
 xvasprintf.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/5/include/stdarg.h:
+/usr/lib/gcc/x86_64-linux-gnu/7/include/stdarg.h:

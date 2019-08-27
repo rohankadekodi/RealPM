@@ -16,7 +16,6 @@ run_git()
     done
 }
 
-:'
 sudo $setup_dir/dax_config.sh
 run_git dax
 
@@ -28,7 +27,6 @@ run_git relaxed_nova
 
 sudo $setup_dir/pmfs_config.sh
 run_git pmfs
-'
 
 sudo $setup_dir/dax_config.sh
 run_git boost

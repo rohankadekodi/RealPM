@@ -2,6 +2,8 @@
 
 cur_dir=`readlink -f ./`
 
+./all_run_new.sh
+
 # Run YCSB
 cd ycsb
 taskset -c 0-7 ./run_ycsb.sh

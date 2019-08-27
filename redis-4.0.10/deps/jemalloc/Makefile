@@ -184,7 +184,7 @@ check: tests
 		for t in $(CTESTS:%.c=%); do \
 			total=`expr $$total + 1`; \
 			/bin/echo -n "$${t} ... "; \
-			$(TEST_LIBRARY_PATH) $${t} /home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/ /home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/ \
+			$(TEST_LIBRARY_PATH) $${t} /home/cc/RealPM/redis-4.0.10/deps/jemalloc/ /home/cc/RealPM/redis-4.0.10/deps/jemalloc/ \
 			  > $${t}.out 2>&1; \
 			if test -e "$${t}.exp"; then \
 				diff -u $${t}.exp \

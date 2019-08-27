@@ -151,7 +151,7 @@ typedef int nl_item;
 #  define GNULIB_defined_T_FMT_AMPM 1
 # endif
 
-# if !0
+# if !1
 #  define ALTMON_1    10200
 #  define ALTMON_2    (ALTMON_1 + 1)
 #  define ALTMON_3    (ALTMON_1 + 2)
@@ -621,7 +621,7 @@ _GL_WARN_EXTERN_C int _gl_warn_on_use
    is that the latter normalizes the encoding names to GNU conventions.  */
 
 #if 1
-# if 1
+# if 0
 #  if !(defined __cplusplus && defined GNULIB_NAMESPACE)
 #   undef nl_langinfo
 #   define nl_langinfo rpl_nl_langinfo

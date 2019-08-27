@@ -16,7 +16,6 @@ run_tar()
     done
 }
 
-:'
 sudo $setup_dir/dax_config.sh
 run_tar dax
 
@@ -28,7 +27,6 @@ run_tar relaxed_nova
 
 sudo $setup_dir/pmfs_config.sh
 run_tar pmfs
-'
 
 sudo $setup_dir/dax_config.sh
 run_tar boost

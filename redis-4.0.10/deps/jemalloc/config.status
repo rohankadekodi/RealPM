@@ -433,7 +433,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc'
+ac_pwd='/home/cc/RealPM/redis-4.0.10/deps/jemalloc'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 test -n "$AWK" || AWK=awk
@@ -669,9 +669,9 @@ S["LIBDIR"]="/usr/local/lib"
 S["INCLUDEDIR"]="/usr/local/include"
 S["BINDIR"]="/usr/local/bin"
 S["PREFIX"]="/usr/local"
-S["abs_objroot"]="/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/"
+S["abs_objroot"]="/home/cc/RealPM/redis-4.0.10/deps/jemalloc/"
 S["objroot"]=""
-S["abs_srcroot"]="/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/"
+S["abs_srcroot"]="/home/cc/RealPM/redis-4.0.10/deps/jemalloc/"
 S["srcroot"]=""
 S["target_alias"]=""
 S["host_alias"]=""

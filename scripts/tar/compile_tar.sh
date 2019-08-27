@@ -11,10 +11,11 @@ set -x
 
 src_dir=`readlink -f ../../`
 cur_dir=`readlink -f ./`
-rsync_path=$src_dir/tar
+tar_path=$src_dir/tar
 
-cd $rsync_path
-./configure
+cd $tar_path
+./bootstrap
+./configure --without-selinux
 make clean
 make -j $num_threads
 
