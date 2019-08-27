@@ -48,6 +48,9 @@ has a list of experiments evaluating SplitFS(strict, sync and POSIX) vs ext4 DAX
     * Check installation using `java -version`
     * `$ sudo apt install maven`
 4. SplitFS: Compiling SplitFS requires installing `Boost`. For Ubuntu, please run `cd dependencies; ./splitfs_deps.sh; cd ..`
+5. tar: `cd dependencies; ./tar_deps.sh; cd ..`
+6. git: `cd dependencies; ./git_deps.sh; cd ..`
+
 
 ---
 
