@@ -549,7 +549,7 @@ configure:7170: $? = 0
 configure:7170: result: yes
 configure:7183: checking for issetugid
 configure:7183: gcc -o conftest -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -fvisibility=hidden  -D_GNU_SOURCE -D_REENTRANT  conftest.c  -lpthread >&5
-/tmp/ccL4Jxff.o: In function `main':
+/tmp/ccHAWB3W.o: In function `main':
 /home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `issetugid'
 collect2: error: ld returned 1 exit status
 configure:7183: $? = 1
@@ -653,7 +653,7 @@ configure: failed program was:
 configure:7183: result: no
 configure:7196: checking for _malloc_thread_cleanup
 configure:7196: gcc -o conftest -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -fvisibility=hidden  -D_GNU_SOURCE -D_REENTRANT  conftest.c  -lpthread >&5
-/tmp/ccJ8e4Le.o: In function `main':
+/tmp/cchHcgTY.o: In function `main':
 /home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `_malloc_thread_cleanup'
 collect2: error: ld returned 1 exit status
 configure:7196: $? = 1
@@ -757,7 +757,7 @@ configure: failed program was:
 configure:7196: result: no
 configure:7210: checking for _pthread_mutex_init_calloc_cb
 configure:7210: gcc -o conftest -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -fvisibility=hidden  -D_GNU_SOURCE -D_REENTRANT  conftest.c  -lpthread >&5
-/tmp/ccF3GJzg.o: In function `main':
+/tmp/ccpPAg22.o: In function `main':
 /home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `_pthread_mutex_init_calloc_cb'
 collect2: error: ld returned 1 exit status
 configure:7210: $? = 1
