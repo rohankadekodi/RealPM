@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -x
+
+sudo rm -rf /mnt/pmem_emul/* && sync
+
+sudo /home/rohan/projects/quill-modified/run_quill.sh -p /home/rohan/projects/quill-modified/ -t nvp_nvp.tree ./redis-server ../redis.conf &
+
+sleep 1
+
+sudo ./redis-benchmark -t set -n 1000000 -d 1024 -c 1 -s /tmp/redis.sock
+
+sudo -S kill `pgrep redis`
+#sudo kill `pgrep sudo`

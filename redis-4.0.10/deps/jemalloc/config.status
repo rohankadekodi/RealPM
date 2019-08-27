@@ -393,8 +393,9 @@ on `(hostname || uname -n) 2>/dev/null | sed 1q`
 "
 
 # Files that config.status was made for.
-config_files=" Makefile doc/html.xsl:doc/html.xsl.in doc/manpages.xsl:doc/manpages.xsl.in doc/jemalloc.xml:doc/jemalloc.xml.in include/jemalloc/jemalloc.h:include/jemalloc/jemalloc.h.in include/jemalloc/internal/jemalloc_internal.h test/jemalloc_test.h:test/jemalloc_test.h.in config.stamp"
-config_headers=" include/jemalloc/jemalloc_defs.h:include/jemalloc/jemalloc_defs.h.in"
+config_files=" Makefile jemalloc.pc:jemalloc.pc.in doc/html.xsl:doc/html.xsl.in doc/manpages.xsl:doc/manpages.xsl.in doc/jemalloc.xml:doc/jemalloc.xml.in include/jemalloc/jemalloc_macros.h:include/jemalloc/jemalloc_macros.h.in include/jemalloc/jemalloc_protos.h:include/jemalloc/jemalloc_protos.h.in include/jemalloc/jemalloc_typedefs.h:include/jemalloc/jemalloc_typedefs.h.in include/jemalloc/internal/jemalloc_internal.h test/test.sh:test/test.sh.in test/include/test/jemalloc_test.h:test/include/test/jemalloc_test.h.in config.stamp bin/jemalloc-config bin/jemalloc.sh bin/jeprof"
+config_headers=" include/jemalloc/jemalloc_defs.h:include/jemalloc/jemalloc_defs.h.in include/jemalloc/internal/jemalloc_internal_defs.h:include/jemalloc/internal/jemalloc_internal_defs.h.in test/include/test/jemalloc_test_defs.h:test/include/test/jemalloc_test_defs.h.in"
+config_commands=" include/jemalloc/internal/private_namespace.h include/jemalloc/internal/private_unnamespace.h include/jemalloc/internal/public_symbols.txt include/jemalloc/internal/public_namespace.h include/jemalloc/internal/public_unnamespace.h include/jemalloc/internal/size_classes.h include/jemalloc/jemalloc_protos_jet.h include/jemalloc/jemalloc_rename.h include/jemalloc/jemalloc_mangle.h include/jemalloc/jemalloc_mangle_jet.h include/jemalloc/jemalloc.h"
 
 ac_cs_usage="\
 \`$as_me' instantiates files and other configuration actions
@@ -421,6 +422,9 @@ $config_files
 Configuration headers:
 $config_headers
 
+Configuration commands:
+$config_commands
+
 Report bugs to the package provider."
 
 ac_cs_config="'--with-lg-quantum=3' '--with-jemalloc-prefix=je_' '--enable-cc-silence' 'CFLAGS=-std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops ' 'LDFLAGS='"
@@ -433,7 +437,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/cc/RealPM/redis-4.0.10/deps/jemalloc'
+ac_pwd='/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 test -n "$AWK" || AWK=awk
@@ -530,14 +534,85 @@ _ASBOX
   $as_echo "$ac_log"
 } >&5
 
+#
+# INIT-COMMANDS
+#
+
+  srcdir="."
+  objroot=""
+
+
+  srcdir="."
+  objroot=""
+
+
+  srcdir="."
+  objroot=""
+  mangling_map=""
+  public_syms="malloc_conf malloc_message malloc calloc posix_memalign aligned_alloc realloc free mallocx rallocx xallocx sallocx dallocx sdallocx nallocx mallctl mallctlnametomib mallctlbymib malloc_stats_print malloc_usable_size memalign valloc"
+  JEMALLOC_PREFIX="je_"
+
+
+  srcdir="."
+  objroot=""
+
+
+  srcdir="."
+  objroot=""
+
+
+  SHELL="/bin/bash"
+  srcdir="."
+  objroot=""
+  LG_QUANTA="3"
+  LG_TINY_MIN=3
+  LG_PAGE_SIZES="12"
+  LG_SIZE_CLASS_GROUP=2
+
+
+  srcdir="."
+  objroot=""
+
+
+  srcdir="."
+  objroot=""
+
+
+  srcdir="."
+  objroot=""
+
+
+  srcdir="."
+  objroot=""
+
+
+  srcdir="."
+  objroot=""
+  install_suffix=""
+
+
 
 # Handling of arguments.
 for ac_config_target in $ac_config_targets
 do
   case $ac_config_target in
+    "include/jemalloc/internal/private_namespace.h") CONFIG_COMMANDS="$CONFIG_COMMANDS include/jemalloc/internal/private_namespace.h" ;;
+    "include/jemalloc/internal/private_unnamespace.h") CONFIG_COMMANDS="$CONFIG_COMMANDS include/jemalloc/internal/private_unnamespace.h" ;;
+    "include/jemalloc/internal/public_symbols.txt") CONFIG_COMMANDS="$CONFIG_COMMANDS include/jemalloc/internal/public_symbols.txt" ;;
+    "include/jemalloc/internal/public_namespace.h") CONFIG_COMMANDS="$CONFIG_COMMANDS include/jemalloc/internal/public_namespace.h" ;;
+    "include/jemalloc/internal/public_unnamespace.h") CONFIG_COMMANDS="$CONFIG_COMMANDS include/jemalloc/internal/public_unnamespace.h" ;;
+    "include/jemalloc/internal/size_classes.h") CONFIG_COMMANDS="$CONFIG_COMMANDS include/jemalloc/internal/size_classes.h" ;;
+    "include/jemalloc/jemalloc_protos_jet.h") CONFIG_COMMANDS="$CONFIG_COMMANDS include/jemalloc/jemalloc_protos_jet.h" ;;
+    "include/jemalloc/jemalloc_rename.h") CONFIG_COMMANDS="$CONFIG_COMMANDS include/jemalloc/jemalloc_rename.h" ;;
+    "include/jemalloc/jemalloc_mangle.h") CONFIG_COMMANDS="$CONFIG_COMMANDS include/jemalloc/jemalloc_mangle.h" ;;
+    "include/jemalloc/jemalloc_mangle_jet.h") CONFIG_COMMANDS="$CONFIG_COMMANDS include/jemalloc/jemalloc_mangle_jet.h" ;;
+    "include/jemalloc/jemalloc.h") CONFIG_COMMANDS="$CONFIG_COMMANDS include/jemalloc/jemalloc.h" ;;
     "$cfghdrs_tup") CONFIG_HEADERS="$CONFIG_HEADERS $cfghdrs_tup" ;;
     "$cfgoutputs_tup") CONFIG_FILES="$CONFIG_FILES $cfgoutputs_tup" ;;
     "config.stamp") CONFIG_FILES="$CONFIG_FILES config.stamp" ;;
+    "bin/jemalloc-config") CONFIG_FILES="$CONFIG_FILES bin/jemalloc-config" ;;
+    "bin/jemalloc.sh") CONFIG_FILES="$CONFIG_FILES bin/jemalloc.sh" ;;
+    "bin/jeprof") CONFIG_FILES="$CONFIG_FILES bin/jeprof" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac
@@ -551,6 +626,7 @@ done
 if $ac_need_defaults; then
   test "${CONFIG_FILES+set}" = set || CONFIG_FILES=$config_files
   test "${CONFIG_HEADERS+set}" = set || CONFIG_HEADERS=$config_headers
+  test "${CONFIG_COMMANDS+set}" = set || CONFIG_COMMANDS=$config_commands
 fi
 
 # Have a temporary directory for convenience.  Make it in the build tree
@@ -604,45 +680,72 @@ echo 'BEGIN {' >"$ac_tmp/subs1.awk" &&
 cat >>"$ac_tmp/subs1.awk" <<\_ACAWK &&
 S["LTLIBOBJS"]=""
 S["LIBOBJS"]=""
-S["cfgoutputs_out"]="Makefile doc/html.xsl doc/manpages.xsl doc/jemalloc.xml include/jemalloc/jemalloc.h include/jemalloc/internal/jemalloc_internal.h test/jemalloc_test"\
-".h"
-S["cfgoutputs_in"]="Makefile.in doc/html.xsl.in doc/manpages.xsl.in doc/jemalloc.xml.in include/jemalloc/jemalloc.h.in include/jemalloc/internal/jemalloc_internal.h.in "\
-"test/jemalloc_test.h.in"
-S["cfghdrs_out"]="include/jemalloc/jemalloc_defs.h"
-S["cfghdrs_in"]="include/jemalloc/jemalloc_defs.h.in"
+S["cfgoutputs_out"]="Makefile jemalloc.pc doc/html.xsl doc/manpages.xsl doc/jemalloc.xml include/jemalloc/jemalloc_macros.h include/jemalloc/jemalloc_protos.h include/je"\
+"malloc/jemalloc_typedefs.h include/jemalloc/internal/jemalloc_internal.h test/test.sh test/include/test/jemalloc_test.h"
+S["cfgoutputs_in"]="Makefile.in jemalloc.pc.in doc/html.xsl.in doc/manpages.xsl.in doc/jemalloc.xml.in include/jemalloc/jemalloc_macros.h.in include/jemalloc/jemalloc_p"\
+"rotos.h.in include/jemalloc/jemalloc_typedefs.h.in include/jemalloc/internal/jemalloc_internal.h.in test/test.sh.in test/include/test/jemalloc_test."\
+"h.in"
+S["cfghdrs_out"]="include/jemalloc/jemalloc_defs.h include/jemalloc/jemalloc.h include/jemalloc/internal/private_namespace.h include/jemalloc/internal/private_unnames"\
+"pace.h include/jemalloc/internal/public_symbols.txt include/jemalloc/internal/public_namespace.h include/jemalloc/internal/public_unnamespace.h incl"\
+"ude/jemalloc/internal/size_classes.h include/jemalloc/jemalloc_protos_jet.h include/jemalloc/jemalloc_rename.h include/jemalloc/jemalloc_mangle.h in"\
+"clude/jemalloc/jemalloc_mangle_jet.h include/jemalloc/internal/jemalloc_internal_defs.h test/include/test/jemalloc_test_defs.h"
+S["cfghdrs_in"]="include/jemalloc/jemalloc_defs.h.in include/jemalloc/internal/jemalloc_internal_defs.h.in include/jemalloc/internal/private_namespace.sh include/jem"\
+"alloc/internal/private_unnamespace.sh include/jemalloc/internal/private_symbols.txt include/jemalloc/internal/public_namespace.sh include/jemalloc/i"\
+"nternal/public_unnamespace.sh include/jemalloc/internal/size_classes.sh include/jemalloc/jemalloc_rename.sh include/jemalloc/jemalloc_mangle.sh incl"\
+"ude/jemalloc/jemalloc.sh test/include/test/jemalloc_test_defs.h.in"
+S["enable_zone_allocator"]=""
 S["enable_tls"]="1"
-S["enable_lazy_lock"]="1"
-S["jemalloc_version_gid"]=""
-S["jemalloc_version_nrev"]=""
-S["jemalloc_version_bugfix"]=""
-S["jemalloc_version_minor"]=""
-S["jemalloc_version_major"]=""
-S["jemalloc_version"]=""
-S["enable_dynamic_page_shift"]="0"
-S["enable_sysv"]="0"
+S["enable_lazy_lock"]="0"
+S["TESTLIBS"]=""
+S["jemalloc_version_gid"]="e9192eacf8935e29fc62fddc2701f7942b1cc02c"
+S["jemalloc_version_nrev"]="0"
+S["jemalloc_version_bugfix"]="3"
+S["jemalloc_version_minor"]="0"
+S["jemalloc_version_major"]="4"
+S["jemalloc_version"]="4.0.3-0-ge9192eacf8935e29fc62fddc2701f7942b1cc02c"
+S["enable_cache_oblivious"]="1"
 S["enable_xmalloc"]="0"
-S["enable_fill"]="0"
-S["enable_dss"]="0"
-S["enable_swap"]="0"
+S["enable_valgrind"]="1"
+S["enable_utrace"]="0"
+S["enable_fill"]="1"
+S["enable_munmap"]="0"
 S["enable_tcache"]="1"
-S["enable_tiny"]="1"
 S["enable_prof"]="0"
-S["enable_stats"]="0"
+S["enable_stats"]="1"
 S["enable_debug"]="0"
+S["je_"]="je_"
 S["install_suffix"]=""
-S["jemalloc_cprefix"]="JE_"
-S["jemalloc_prefix"]="je_"
+S["private_namespace"]="je_"
+S["JEMALLOC_CPREFIX"]="JE_"
+S["enable_code_coverage"]="0"
 S["AUTOCONF"]="/usr/bin/autoconf"
 S["LD"]="/usr/bin/ld"
-S["AR"]="/usr/bin/ar"
 S["RANLIB"]="ranlib"
 S["INSTALL_DATA"]="${INSTALL} -m 644"
 S["INSTALL_SCRIPT"]="${INSTALL}"
 S["INSTALL_PROGRAM"]="${INSTALL}"
 S["enable_autogen"]="0"
 S["RPATH_EXTRA"]=""
-S["RPATH"]="-Wl,-rpath,"
+S["CC_MM"]="1"
+S["AROUT"]=" $@"
+S["ARFLAGS"]="crus"
+S["MKLIB"]=""
+S["LDTARGET"]="-o $@"
+S["CTARGET"]="-o $@"
+S["PIC_CFLAGS"]="-fPIC -DPIC"
+S["SOREV"]="so.2"
+S["EXTRA_LDFLAGS"]=""
+S["DSO_LDFLAGS"]="-shared -Wl,-soname,$(@F)"
+S["libprefix"]="lib"
+S["exe"]=""
+S["a"]="a"
+S["o"]="o"
+S["importlib"]="so"
+S["so"]="so"
+S["LD_PRELOAD_VAR"]="LD_PRELOAD"
+S["RPATH"]="-Wl,-rpath,$(1)"
 S["abi"]="elf"
+S["AR"]="ar"
 S["host_os"]="linux-gnu"
 S["host_vendor"]="unknown"
 S["host_cpu"]="x86_64"
@@ -659,24 +762,26 @@ S["EXEEXT"]=""
 S["ac_ct_CC"]="gcc"
 S["CPPFLAGS"]=" -D_GNU_SOURCE -D_REENTRANT"
 S["LDFLAGS"]=""
-S["CFLAGS"]="-std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops "
+S["CFLAGS"]="-std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -fvisibility=hidden"
 S["CC"]="gcc"
-S["XSLROOT"]="/usr/share/xml/docbook/stylesheet/docbook-xsl"
-S["XSLTPROC"]=""
+S["XSLROOT"]=""
+S["XSLTPROC"]="false"
 S["MANDIR"]="/usr/local/share/man"
 S["DATADIR"]="/usr/local/share"
 S["LIBDIR"]="/usr/local/lib"
 S["INCLUDEDIR"]="/usr/local/include"
 S["BINDIR"]="/usr/local/bin"
 S["PREFIX"]="/usr/local"
-S["abs_objroot"]="/home/cc/RealPM/redis-4.0.10/deps/jemalloc/"
+S["abs_objroot"]="/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/"
 S["objroot"]=""
-S["abs_srcroot"]="/home/cc/RealPM/redis-4.0.10/deps/jemalloc/"
+S["abs_srcroot"]="/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/"
 S["srcroot"]=""
+S["rev"]="2"
+S["CONFIG"]="--with-lg-quantum=3 --with-jemalloc-prefix=je_ --enable-cc-silence 'CFLAGS=-std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops ' LDFLAGS="
 S["target_alias"]=""
 S["host_alias"]=""
 S["build_alias"]=""
-S["LIBS"]=" -lpthread -ldl"
+S["LIBS"]=" -lpthread"
 S["ECHO_T"]=""
 S["ECHO_N"]="-n"
 S["ECHO_C"]=""
@@ -692,7 +797,6 @@ S["infodir"]="${datarootdir}/info"
 S["docdir"]="${datarootdir}/doc/${PACKAGE}"
 S["oldincludedir"]="/usr/include"
 S["includedir"]="${prefix}/include"
-S["runstatedir"]="${localstatedir}/run"
 S["localstatedir"]="${prefix}/var"
 S["sharedstatedir"]="${prefix}/com"
 S["sysconfdir"]="${prefix}/etc"
@@ -773,24 +877,48 @@ D["SIZEOF_VOID_P"]=" 8"
 D["LG_SIZEOF_PTR"]=" 3"
 D["SIZEOF_INT"]=" 4"
 D["LG_SIZEOF_INT"]=" 2"
+D["SIZEOF_LONG"]=" 8"
+D["LG_SIZEOF_LONG"]=" 3"
+D["SIZEOF_INTMAX_T"]=" 8"
+D["LG_SIZEOF_INTMAX_T"]=" 3"
 D["CPU_SPINWAIT"]=" __asm__ volatile(\"pause\")"
+D["JEMALLOC_HAS_ALLOCA_H"]=" 1"
+D["JEMALLOC_PURGE_MADVISE_DONTNEED"]=" "
+D["JEMALLOC_THREADED_INIT"]=" "
+D["JEMALLOC_USE_CXX_THROW"]=" "
+D["HAVE_MALLOC_H"]=" 1"
+D["JEMALLOC_USABLE_SIZE_CONST"]=" "
 D["JEMALLOC_HAVE_ATTR"]=" "
-D["JEMALLOC_PURGE_MADVISE_DONTNEED"]=" 1"
-D["JEMALLOC_MREMAP_FIXED"]=" 1"
+D["JEMALLOC_TLS_MODEL"]=" __attribute__((tls_model(\"initial-exec\")))"
+D["JEMALLOC_HAVE_ATTR_ALLOC_SIZE"]=" "
+D["JEMALLOC_HAVE_ATTR_FORMAT_GNU_PRINTF"]=" "
+D["JEMALLOC_HAVE_ATTR_FORMAT_PRINTF"]=" "
+D["JEMALLOC_OVERRIDE_MEMALIGN"]=" "
+D["JEMALLOC_OVERRIDE_VALLOC"]=" "
 D["JEMALLOC_PREFIX"]=" \"je_\""
 D["JEMALLOC_CPREFIX"]=" \"JE_\""
-P["JEMALLOC_P"]="(string_that_no_one_should_want_to_use_as_a_jemalloc_API_prefix)"
-D["JEMALLOC_P"]=" je_##string_that_no_one_should_want_to_use_as_a_jemalloc_API_pref"\
-"ix"
-D["JEMALLOC_CC_SILENCE"]=" 1"
-D["JEMALLOC_TINY"]=" "
+D["JEMALLOC_PRIVATE_NAMESPACE"]=" je_"
+D["JEMALLOC_CC_SILENCE"]=" "
+D["JEMALLOC_STATS"]=" "
 D["JEMALLOC_TCACHE"]=" "
-D["STATIC_PAGE_SHIFT"]=" 12"
+D["JEMALLOC_MAPS_COALESCE"]=" "
+D["JEMALLOC_DSS"]=" "
+D["JEMALLOC_FILL"]=" "
+D["JEMALLOC_VALGRIND"]=" "
+D["JEMALLOC_CACHE_OBLIVIOUS"]=" "
+D["JEMALLOC_INTERNAL_FFSL"]=" __builtin_ffsl"
+D["JEMALLOC_INTERNAL_FFS"]=" __builtin_ffs"
+D["LG_TINY_MIN"]=" 3"
+D["LG_QUANTUM"]=" 3"
+D["LG_PAGE"]=" 12"
 D["HAVE_PTHREAD_H"]=" 1"
-D["HAVE_DLFCN_H"]=" 1"
-D["JEMALLOC_LAZY_LOCK"]=" "
-D["JEMALLOC_OVERRIDE_MEMALIGN"]=" 1"
-D["JEMALLOC_OVERRIDE_VALLOC"]=" 1"
+D["JEMALLOC_HAVE_SECURE_GETENV"]=" "
+D["JEMALLOC_TLS"]=" "
+D["JEMALLOC_HAVE_MADVISE"]=" "
+D["JEMALLOC_HAVE_BUILTIN_CLZ"]=" "
+D["JEMALLOC_GLIBC_MALLOC_HOOK"]=" "
+D["JEMALLOC_GLIBC_MEMALIGN_HOOK"]=" "
+D["JEMALLOC_HAVE_PTHREAD_MUTEX_ADAPTIVE_NP"]=" "
 D["HAVE__BOOL"]=" 1"
 D["HAVE_STDBOOL_H"]=" 1"
   for (key in D) D_is_set[key] = 1
@@ -829,7 +957,7 @@ _ACAWK
 fi # test -n "$CONFIG_HEADERS"
 
 
-eval set X "  :F $CONFIG_FILES  :H $CONFIG_HEADERS    "
+eval set X "  :F $CONFIG_FILES  :H $CONFIG_HEADERS    :C $CONFIG_COMMANDS"
 shift
 for ac_tag
 do
@@ -1069,9 +1197,71 @@ $as_echo "$as_me: $ac_file is unchanged" >&6;}
   fi
  ;;
 
-
+  :C)  { $as_echo "$as_me:${as_lineno-$LINENO}: executing $ac_file commands" >&5
+$as_echo "$as_me: executing $ac_file commands" >&6;}
+ ;;
   esac
 
+
+  case $ac_file$ac_mode in
+    "include/jemalloc/internal/private_namespace.h":C)
+  mkdir -p "${objroot}include/jemalloc/internal"
+  "${srcdir}/include/jemalloc/internal/private_namespace.sh" "${srcdir}/include/jemalloc/internal/private_symbols.txt" > "${objroot}include/jemalloc/internal/private_namespace.h"
+ ;;
+    "include/jemalloc/internal/private_unnamespace.h":C)
+  mkdir -p "${objroot}include/jemalloc/internal"
+  "${srcdir}/include/jemalloc/internal/private_unnamespace.sh" "${srcdir}/include/jemalloc/internal/private_symbols.txt" > "${objroot}include/jemalloc/internal/private_unnamespace.h"
+ ;;
+    "include/jemalloc/internal/public_symbols.txt":C)
+  f="${objroot}include/jemalloc/internal/public_symbols.txt"
+  mkdir -p "${objroot}include/jemalloc/internal"
+  cp /dev/null "${f}"
+  for nm in `echo ${mangling_map} |tr ',' ' '` ; do
+    n=`echo ${nm} |tr ':' ' ' |awk '{print $1}'`
+    m=`echo ${nm} |tr ':' ' ' |awk '{print $2}'`
+    echo "${n}:${m}" >> "${f}"
+        public_syms=`for sym in ${public_syms}; do echo "${sym}"; done |grep -v "^${n}\$" |tr '\n' ' '`
+  done
+  for sym in ${public_syms} ; do
+    n="${sym}"
+    m="${JEMALLOC_PREFIX}${sym}"
+    echo "${n}:${m}" >> "${f}"
+  done
+ ;;
+    "include/jemalloc/internal/public_namespace.h":C)
+  mkdir -p "${objroot}include/jemalloc/internal"
+  "${srcdir}/include/jemalloc/internal/public_namespace.sh" "${objroot}include/jemalloc/internal/public_symbols.txt" > "${objroot}include/jemalloc/internal/public_namespace.h"
+ ;;
+    "include/jemalloc/internal/public_unnamespace.h":C)
+  mkdir -p "${objroot}include/jemalloc/internal"
+  "${srcdir}/include/jemalloc/internal/public_unnamespace.sh" "${objroot}include/jemalloc/internal/public_symbols.txt" > "${objroot}include/jemalloc/internal/public_unnamespace.h"
+ ;;
+    "include/jemalloc/internal/size_classes.h":C)
+  mkdir -p "${objroot}include/jemalloc/internal"
+  "${SHELL}" "${srcdir}/include/jemalloc/internal/size_classes.sh" "${LG_QUANTA}" ${LG_TINY_MIN} "${LG_PAGE_SIZES}" ${LG_SIZE_CLASS_GROUP} > "${objroot}include/jemalloc/internal/size_classes.h"
+ ;;
+    "include/jemalloc/jemalloc_protos_jet.h":C)
+  mkdir -p "${objroot}include/jemalloc"
+  cat "${srcdir}/include/jemalloc/jemalloc_protos.h.in" | sed -e 's/@je_@/jet_/g' > "${objroot}include/jemalloc/jemalloc_protos_jet.h"
+ ;;
+    "include/jemalloc/jemalloc_rename.h":C)
+  mkdir -p "${objroot}include/jemalloc"
+  "${srcdir}/include/jemalloc/jemalloc_rename.sh" "${objroot}include/jemalloc/internal/public_symbols.txt" > "${objroot}include/jemalloc/jemalloc_rename.h"
+ ;;
+    "include/jemalloc/jemalloc_mangle.h":C)
+  mkdir -p "${objroot}include/jemalloc"
+  "${srcdir}/include/jemalloc/jemalloc_mangle.sh" "${objroot}include/jemalloc/internal/public_symbols.txt" je_ > "${objroot}include/jemalloc/jemalloc_mangle.h"
+ ;;
+    "include/jemalloc/jemalloc_mangle_jet.h":C)
+  mkdir -p "${objroot}include/jemalloc"
+  "${srcdir}/include/jemalloc/jemalloc_mangle.sh" "${objroot}include/jemalloc/internal/public_symbols.txt" jet_ > "${objroot}include/jemalloc/jemalloc_mangle_jet.h"
+ ;;
+    "include/jemalloc/jemalloc.h":C)
+  mkdir -p "${objroot}include/jemalloc"
+  "${srcdir}/include/jemalloc/jemalloc.sh" "${objroot}" > "${objroot}include/jemalloc/jemalloc${install_suffix}.h"
+ ;;
+
+  esac
 done # for ac_tag
 
 

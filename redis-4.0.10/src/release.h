@@ -1,3 +1,3 @@
-#define REDIS_GIT_SHA1 "71dec711"
-#define REDIS_GIT_DIRTY "64302"
-#define REDIS_BUILD_ID "skylake-18-1566916429"
+#define REDIS_GIT_SHA1 "915d0da7"
+#define REDIS_GIT_DIRTY "1129432"
+#define REDIS_BUILD_ID "pune-lom-1566948597"
