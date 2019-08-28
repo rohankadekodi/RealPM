@@ -51,7 +51,6 @@ has a list of experiments evaluating SplitFS(strict, sync and POSIX) vs ext4 DAX
 5. tar: `cd dependencies; ./tar_deps.sh; cd ..`
 6. git: `cd dependencies; ./git_deps.sh; cd ..`
 
-
 ---
 
 ### Contact

@@ -13,7 +13,7 @@ taskset -c 0-7 ./run_git.sh
 cd $cur_dir
 
 # Run REDIS
-#cd redis
-#taskset -c 0-7 ./run_redis.sh
-#cd $cur_dir
+cd redis
+taskset -c 0-7 ./run_redis.sh
+cd $cur_dir
 
