@@ -437,7 +437,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc'
+ac_pwd='/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 test -n "$AWK" || AWK=awk
@@ -697,12 +697,12 @@ S["enable_zone_allocator"]=""
 S["enable_tls"]="1"
 S["enable_lazy_lock"]="0"
 S["TESTLIBS"]=""
-S["jemalloc_version_gid"]="e9192eacf8935e29fc62fddc2701f7942b1cc02c"
+S["jemalloc_version_gid"]="0000000000000000000000000000000000000000"
 S["jemalloc_version_nrev"]="0"
-S["jemalloc_version_bugfix"]="3"
+S["jemalloc_version_bugfix"]="0"
 S["jemalloc_version_minor"]="0"
-S["jemalloc_version_major"]="4"
-S["jemalloc_version"]="4.0.3-0-ge9192eacf8935e29fc62fddc2701f7942b1cc02c"
+S["jemalloc_version_major"]="0"
+S["jemalloc_version"]="0.0.0-0-g0000000000000000000000000000000000000000"
 S["enable_cache_oblivious"]="1"
 S["enable_xmalloc"]="0"
 S["enable_valgrind"]="1"
@@ -772,9 +772,9 @@ S["LIBDIR"]="/usr/local/lib"
 S["INCLUDEDIR"]="/usr/local/include"
 S["BINDIR"]="/usr/local/bin"
 S["PREFIX"]="/usr/local"
-S["abs_objroot"]="/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/"
+S["abs_objroot"]="/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/"
 S["objroot"]=""
-S["abs_srcroot"]="/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/"
+S["abs_srcroot"]="/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/"
 S["srcroot"]=""
 S["rev"]="2"
 S["CONFIG"]="--with-lg-quantum=3 --with-jemalloc-prefix=je_ --enable-cc-silence 'CFLAGS=-std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops ' LDFLAGS="

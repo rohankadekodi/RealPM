@@ -549,8 +549,8 @@ configure:7170: $? = 0
 configure:7170: result: yes
 configure:7183: checking for issetugid
 configure:7183: gcc -o conftest -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -fvisibility=hidden  -D_GNU_SOURCE -D_REENTRANT  conftest.c  -lpthread >&5
-/tmp/cc95LiMK.o: In function `main':
-/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `issetugid'
+/tmp/ccpYaCbr.o: In function `main':
+/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `issetugid'
 collect2: error: ld returned 1 exit status
 configure:7183: $? = 1
 configure: failed program was:
@@ -653,8 +653,8 @@ configure: failed program was:
 configure:7183: result: no
 configure:7196: checking for _malloc_thread_cleanup
 configure:7196: gcc -o conftest -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -fvisibility=hidden  -D_GNU_SOURCE -D_REENTRANT  conftest.c  -lpthread >&5
-/tmp/cctmUzcK.o: In function `main':
-/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `_malloc_thread_cleanup'
+/tmp/ccNlZwfv.o: In function `main':
+/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `_malloc_thread_cleanup'
 collect2: error: ld returned 1 exit status
 configure:7196: $? = 1
 configure: failed program was:
@@ -757,8 +757,8 @@ configure: failed program was:
 configure:7196: result: no
 configure:7210: checking for _pthread_mutex_init_calloc_cb
 configure:7210: gcc -o conftest -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -fvisibility=hidden  -D_GNU_SOURCE -D_REENTRANT  conftest.c  -lpthread >&5
-/tmp/cchlxVWL.o: In function `main':
-/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `_pthread_mutex_init_calloc_cb'
+/tmp/ccTbfd2w.o: In function `main':
+/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `_pthread_mutex_init_calloc_cb'
 collect2: error: ld returned 1 exit status
 configure:7210: $? = 1
 configure: failed program was:
@@ -1617,10 +1617,8 @@ config.status:1011: creating bin/jemalloc-config
 config.status:1011: creating bin/jemalloc.sh
 config.status:1011: creating bin/jeprof
 config.status:1011: creating include/jemalloc/jemalloc_defs.h
-config.status:1186: include/jemalloc/jemalloc_defs.h is unchanged
 config.status:1011: creating include/jemalloc/internal/jemalloc_internal_defs.h
 config.status:1011: creating test/include/test/jemalloc_test_defs.h
-config.status:1186: test/include/test/jemalloc_test_defs.h is unchanged
 config.status:1200: executing include/jemalloc/internal/private_namespace.h commands
 config.status:1200: executing include/jemalloc/internal/private_unnamespace.h commands
 config.status:1200: executing include/jemalloc/internal/public_symbols.txt commands
@@ -1633,7 +1631,7 @@ config.status:1200: executing include/jemalloc/jemalloc_mangle.h commands
 config.status:1200: executing include/jemalloc/jemalloc_mangle_jet.h commands
 config.status:1200: executing include/jemalloc/jemalloc.h commands
 configure:9599: result: ===============================================================================
-configure:9601: result: jemalloc version   : 4.0.3-0-ge9192eacf8935e29fc62fddc2701f7942b1cc02c
+configure:9601: result: jemalloc version   : 0.0.0-0-g0000000000000000000000000000000000000000
 configure:9603: result: library revision   : 2
 configure:9605: result: 
 configure:9607: result: CONFIG             : --with-lg-quantum=3 --with-jemalloc-prefix=je_ --enable-cc-silence 'CFLAGS=-std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops ' LDFLAGS=
@@ -1657,9 +1655,9 @@ configure:9641: result: LIBDIR             : /usr/local/lib
 configure:9643: result: MANDIR             : /usr/local/share/man
 configure:9645: result: 
 configure:9647: result: srcroot            : 
-configure:9649: result: abs_srcroot        : /home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/
+configure:9649: result: abs_srcroot        : /home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/
 configure:9651: result: objroot            : 
-configure:9653: result: abs_objroot        : /home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/
+configure:9653: result: abs_objroot        : /home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/
 configure:9655: result: 
 configure:9657: result: JEMALLOC_PREFIX    : je_
 configure:9659: result: JEMALLOC_PRIVATE_NAMESPACE
@@ -1836,8 +1834,8 @@ XSLROOT=''
 XSLTPROC='false'
 a='a'
 abi='elf'
-abs_objroot='/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/'
-abs_srcroot='/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/'
+abs_objroot='/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/'
+abs_srcroot='/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/'
 ac_ct_CC='gcc'
 bindir='${exec_prefix}/bin'
 build='x86_64-unknown-linux-gnu'
@@ -1881,10 +1879,10 @@ includedir='${prefix}/include'
 infodir='${datarootdir}/info'
 install_suffix=''
 je_='je_'
-jemalloc_version='4.0.3-0-ge9192eacf8935e29fc62fddc2701f7942b1cc02c'
-jemalloc_version_bugfix='3'
-jemalloc_version_gid='e9192eacf8935e29fc62fddc2701f7942b1cc02c'
-jemalloc_version_major='4'
+jemalloc_version='0.0.0-0-g0000000000000000000000000000000000000000'
+jemalloc_version_bugfix='0'
+jemalloc_version_gid='0000000000000000000000000000000000000000'
+jemalloc_version_major='0'
 jemalloc_version_minor='0'
 jemalloc_version_nrev='0'
 libdir='${exec_prefix}/lib'
