@@ -1,3 +1,3 @@
-#define REDIS_GIT_SHA1 "8e51861a"
-#define REDIS_GIT_DIRTY "97"
-#define REDIS_BUILD_ID "pune-lom-1566950018"
+#define REDIS_GIT_SHA1 "c8453aef"
+#define REDIS_GIT_DIRTY "37671"
+#define REDIS_BUILD_ID "pune-lom-1566948011"

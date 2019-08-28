@@ -549,8 +549,8 @@ configure:7170: $? = 0
 configure:7170: result: yes
 configure:7183: checking for issetugid
 configure:7183: gcc -o conftest -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -fvisibility=hidden  -D_GNU_SOURCE -D_REENTRANT  conftest.c  -lpthread >&5
-/tmp/ccHAWB3W.o: In function `main':
-/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `issetugid'
+/tmp/cc95LiMK.o: In function `main':
+/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `issetugid'
 collect2: error: ld returned 1 exit status
 configure:7183: $? = 1
 configure: failed program was:
@@ -653,8 +653,8 @@ configure: failed program was:
 configure:7183: result: no
 configure:7196: checking for _malloc_thread_cleanup
 configure:7196: gcc -o conftest -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -fvisibility=hidden  -D_GNU_SOURCE -D_REENTRANT  conftest.c  -lpthread >&5
-/tmp/cchHcgTY.o: In function `main':
-/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `_malloc_thread_cleanup'
+/tmp/cctmUzcK.o: In function `main':
+/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `_malloc_thread_cleanup'
 collect2: error: ld returned 1 exit status
 configure:7196: $? = 1
 configure: failed program was:
@@ -757,8 +757,8 @@ configure: failed program was:
 configure:7196: result: no
 configure:7210: checking for _pthread_mutex_init_calloc_cb
 configure:7210: gcc -o conftest -std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops  -fvisibility=hidden  -D_GNU_SOURCE -D_REENTRANT  conftest.c  -lpthread >&5
-/tmp/ccpPAg22.o: In function `main':
-/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `_pthread_mutex_init_calloc_cb'
+/tmp/cchlxVWL.o: In function `main':
+/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/conftest.c:93: undefined reference to `_pthread_mutex_init_calloc_cb'
 collect2: error: ld returned 1 exit status
 configure:7210: $? = 1
 configure: failed program was:
@@ -1619,7 +1619,6 @@ config.status:1011: creating bin/jeprof
 config.status:1011: creating include/jemalloc/jemalloc_defs.h
 config.status:1186: include/jemalloc/jemalloc_defs.h is unchanged
 config.status:1011: creating include/jemalloc/internal/jemalloc_internal_defs.h
-config.status:1186: include/jemalloc/internal/jemalloc_internal_defs.h is unchanged
 config.status:1011: creating test/include/test/jemalloc_test_defs.h
 config.status:1186: test/include/test/jemalloc_test_defs.h is unchanged
 config.status:1200: executing include/jemalloc/internal/private_namespace.h commands
@@ -1658,9 +1657,9 @@ configure:9641: result: LIBDIR             : /usr/local/lib
 configure:9643: result: MANDIR             : /usr/local/share/man
 configure:9645: result: 
 configure:9647: result: srcroot            : 
-configure:9649: result: abs_srcroot        : /home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/
+configure:9649: result: abs_srcroot        : /home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/
 configure:9651: result: objroot            : 
-configure:9653: result: abs_objroot        : /home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/
+configure:9653: result: abs_objroot        : /home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/
 configure:9655: result: 
 configure:9657: result: JEMALLOC_PREFIX    : je_
 configure:9659: result: JEMALLOC_PRIVATE_NAMESPACE
@@ -1837,8 +1836,8 @@ XSLROOT=''
 XSLTPROC='false'
 a='a'
 abi='elf'
-abs_objroot='/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/'
-abs_srcroot='/home/rohan/projects/RealPM/redis-4.0.10/deps/jemalloc/'
+abs_objroot='/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/'
+abs_srcroot='/home/rohan/projects/run-on-real-pm/pmboost-test/redis-4.0.10/deps/jemalloc/'
 ac_ct_CC='gcc'
 bindir='${exec_prefix}/bin'
 build='x86_64-unknown-linux-gnu'

@@ -17,6 +17,7 @@ cd deps
 make hiredis jemalloc linenoise lua geohash-int
 cd ..
 
+make -j
 sudo make install
 
 cd $cur_dir
