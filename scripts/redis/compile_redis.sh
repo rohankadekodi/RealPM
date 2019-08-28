@@ -10,9 +10,9 @@ cd $redis_dir
 make distclean
 cd deps
 
-cd jemalloc
-./autogen.sh
-cd ..
+#cd jemalloc
+#./autogen.sh
+#cd ..
 
 make hiredis jemalloc linenoise lua geohash-int
 cd ..
