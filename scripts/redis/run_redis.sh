@@ -16,7 +16,6 @@ run_redis()
     done
 }
 
-:'
 sudo $setup_dir/dax_config.sh
 run_redis dax
 
@@ -28,7 +27,6 @@ run_redis relaxed_nova
 
 sudo $setup_dir/pmfs_config.sh
 run_redis pmfs
-'
 
 sudo $setup_dir/dax_config.sh
 run_redis boost
