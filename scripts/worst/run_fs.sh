@@ -48,7 +48,6 @@ run_workload()
     if [ $run_boost -eq 1 ]; then
 
         rm -rf $pmem_dir/*
-        cp $workload_dir/test.txt $pmem_dir && sync
         sync && echo 3 > /proc/sys/vm/drop_caches
         export LD_LIBRARY_PATH=$src_dir/splitfs-so/worst/boost
         export NVP_TREE_FILE=$boost_dir/bin/nvp_nvp.tree
@@ -57,7 +56,6 @@ run_workload()
     else
 
         rm -rf $pmem_dir/*
-        cp $workload_dir/test.txt $pmem_dir && sync
         sync && echo 3 > /proc/sys/vm/drop_caches
         export LD_LIBRARY_PATH=$src_dir/splitfs-so/worst/fs
         export NVP_TREE_FILE=$boost_dir/bin/nvp_nvp.tree
