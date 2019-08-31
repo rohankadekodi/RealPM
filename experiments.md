@@ -21,6 +21,10 @@ We evaluate and benchmark on SplitFS using different application benchmarks like
 8. rsync: `cd scripts/rsync; ./compile_rsync.sh; cd ../..` -- This will compile rsync
 9. tar: `cd scripts/tar; ./compile_tar.sh; cd ../../` -- This will compile tar
 10. redis: `cd scripts/redis; ./compile_redis.sh; cd ../..` -- This will compile redis
+11. micro: `cd scripts/micro; ./compile_micro.sh; cd ../..` -- This will compile microbenchmarks
+12. factor: `cd scripts/factor; ./compile_factor.sh; cd ../..` -- This will compile splitfs techniques
+13. syscall: `cd scripts/worst; ./compile_worst.sh; cd ../..` -- This will compile syscall overheads
+14. motivation: `cd scripts/motivation; ./compile_mot.sh; cd ../..` -- This will compile motivational experiments
 
 Note: The <num_threads> argument in the compilation scripts performs the compilation with the number of threads given as input to the script, to improve the speed of compilation.
 
@@ -33,6 +37,8 @@ Note: The <num_threads> argument in the compilation scripts performs the compila
 3. rsync: `cd scripts/rsync; sudo ./rsync_gen_workload.sh; cd ../..` -- This will create the rsync workload according to the backup data distribution as mentioned in the Paper
 4. tar: `cd scripts/tar; ./tar_gen_workload.sh; cd ../..` -- This will create tar workload
 5. git: `cd scripts/git; ./git_gen_workload.sh; cd ../..` -- This will create git workload
+6. micro: `cd scripts/micro; ./micro_gen_workload.sh; cd ../..` -- This will create microbench workload
+7. factor: `cd scripts/factor; ./factor_gen_workload.sh; cd ../..` -- This will create splitfs techniques workload
 
 ---
 
