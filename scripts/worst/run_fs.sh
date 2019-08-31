@@ -41,6 +41,11 @@ run_workload()
     mkdir -p $fs_results
     rm $fs_results/run$run_id
 
+    if [ $run_boost -eq 1 ]; then
+        export LD_LIBRARY_PATH=$src_dir/splitfs-so/worst/$mode
+        export NVP_TREE_FILE=$boost_dir/bin/nvp_nvp.tree
+    fi
+
     sleep 2
 
     date
@@ -49,9 +54,7 @@ run_workload()
 
         rm -rf $pmem_dir/*
         sync && echo 3 > /proc/sys/vm/drop_caches
-        export LD_LIBRARY_PATH=$src_dir/splitfs-so/worst/boost
-        export NVP_TREE_FILE=$boost_dir/bin/nvp_nvp.tree
-        LD_PRELOAD=$src_dir/splitfs-so/worst/boost/libnvp.so $worst_dir/worst 16K 1M 4K 100000 2>&1 | tee $fs_results/run$run_id
+        LD_PRELOAD=$src_dir/splitfs-so/worst/$mode/libnvp.so $worst_dir/worst 16K 1M 4K 100000 2>&1 | tee $fs_results/run$run_id
 
     else
 

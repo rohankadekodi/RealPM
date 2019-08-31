@@ -20,4 +20,10 @@ sudo $setup_dir/dax_config.sh
 run_worst dax
 
 sudo $setup_dir/dax_config.sh
+run_worst boost
+
+sudo $setup_dir/dax_config.sh
+run_worst sync_boost
+
+sudo $setup_dir/dax_config.sh
 run_worst posix_boost
