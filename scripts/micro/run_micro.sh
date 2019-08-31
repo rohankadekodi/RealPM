@@ -12,7 +12,7 @@ run_micro()
     do
         sudo rm -rf $pmem_dir/*
         sudo taskset -c 0-7 ./run_fs.sh $fs $run
-        sleep 5
+        sleep 2
     done
 }
 

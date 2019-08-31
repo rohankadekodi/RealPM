@@ -12,7 +12,8 @@ fs=$1
 run_id=$2
 cur_dir=`readlink -f ./`
 src_dir=`readlink -f ../../`
-workload_dir=$src_dir/micro
+micro_dir=$src_dir/micro
+workload_dir=$micro_dir/workload
 pmem_dir=/mnt/pmem_emul
 boost_dir=$src_dir/splitfs
 result_dir=$src_dir/results
@@ -33,9 +34,6 @@ fi
 
 ulimit -c unlimited
 
-echo Sleeping for 5 seconds . . 
-sleep 5
-
 run_workload()
 {
 
@@ -49,7 +47,7 @@ run_workload()
         export NVP_TREE_FILE=$boost_dir/bin/nvp_nvp.tree
     fi
 
-    sleep 5
+    sleep 2
 
     date
 
@@ -58,59 +56,56 @@ run_workload()
         rm -rf $pmem_dir/*
         cp $workload_dir/test.txt $pmem_dir && sync
         sync && echo 3 > /proc/sys/vm/drop_caches
-        LD_PRELOAD=$src_dir/splitfs-so/micro/$mode/libnvp.so $workload_dir/rw_expt write seq 4096 2>&1 | tee $fs_results/run$run_id
+        LD_PRELOAD=$src_dir/splitfs-so/micro/$mode/libnvp.so $micro_dir/rw_expt write seq 4096 2>&1 | tee $fs_results/run$run_id
 
         rm $pmem_dir/*
         cp $workload_dir/test.txt $pmem_dir && sync
         sync && echo 3 > /proc/sys/vm/drop_caches
-        LD_PRELOAD=$src_dir/splitfs-so/micro/$mode/libnvp.so $workload_dir/rw_expt write rand 4096 2>&1 | tee -a $fs_results/run$run_id
+        LD_PRELOAD=$src_dir/splitfs-so/micro/$mode/libnvp.so $micro_dir/rw_expt write rand 4096 2>&1 | tee -a $fs_results/run$run_id
 
         rm $pmem_dir/*
         cp $workload_dir/test.txt $pmem_dir && sync
         sync && echo 3 > /proc/sys/vm/drop_caches
-        LD_PRELOAD=$src_dir/splitfs-so/micro/$mode/libnvp.so $workload_dir/rw_expt read seq 4096 2>&1 | tee -a $fs_results/run$run_id
+        LD_PRELOAD=$src_dir/splitfs-so/micro/$mode/libnvp.so $micro_dir/rw_expt read seq 4096 2>&1 | tee -a $fs_results/run$run_id
 
         rm $pmem_dir/*
         cp $workload_dir/test.txt $pmem_dir && sync
         sync && echo 3 > /proc/sys/vm/drop_caches
-        LD_PRELOAD=$src_dir/splitfs-so/micro/$mode/libnvp.so $workload_dir/rw_expt read rand 4096 2>&1 | tee -a $fs_results/run$run_id
+        LD_PRELOAD=$src_dir/splitfs-so/micro/$mode/libnvp.so $micro_dir/rw_expt read rand 4096 2>&1 | tee -a $fs_results/run$run_id
 
         rm $pmem_dir/*
         sync && echo 3 > /proc/sys/vm/drop_caches
-        LD_PRELOAD=$src_dir/splitfs-so/micro/$mode/libnvp.so $workload_dir/rw_expt write seq 4096 2>&1 | tee -a $fs_results/run$run_id
+        LD_PRELOAD=$src_dir/splitfs-so/micro/$mode/libnvp.so $micro_dir/rw_expt write seq 4096 2>&1 | tee -a $fs_results/run$run_id
 
     else
 
         rm -rf $pmem_dir/*
         cp $workload_dir/test.txt $pmem_dir && sync
         sync && echo 3 > /proc/sys/vm/drop_caches
-        $workload_dir/rw_expt write seq 4096 2>&1 | tee $fs_results/run$run_id
+        $micro_dir/rw_expt write seq 4096 2>&1 | tee $fs_results/run$run_id
 
         rm -rf $pmem_dir/*
         cp $workload_dir/test.txt $pmem_dir && sync
         sync && echo 3 > /proc/sys/vm/drop_caches
-        $workload_dir/rw_expt write rand 4096 2>&1 | tee -a $fs_results/run$run_id
+        $micro_dir/rw_expt write rand 4096 2>&1 | tee -a $fs_results/run$run_id
 
         rm -rf $pmem_dir/*
         cp $workload_dir/test.txt $pmem_dir && sync
         sync && echo 3 > /proc/sys/vm/drop_caches
-        $workload_dir/rw_expt read seq 4096 2>&1 | tee -a $fs_results/run$run_id
+        $micro_dir/rw_expt read seq 4096 2>&1 | tee -a $fs_results/run$run_id
 
         rm -rf $pmem_dir/*
         cp $workload_dir/test.txt $pmem_dir && sync
         sync && echo 3 > /proc/sys/vm/drop_caches
-        $workload_dir/rw_expt read rand 4096 2>&1 | tee -a $fs_results/run$run_id
+        $micro_dir/rw_expt read rand 4096 2>&1 | tee -a $fs_results/run$run_id
 
         rm -rf $pmem_dir/*
         sync && echo 3 > /proc/sys/vm/drop_caches
-        $workload_dir/rw_expt write seq 4096 2>&1 | tee -a $fs_results/run$run_id
+        $micro_dir/rw_expt write seq 4096 2>&1 | tee -a $fs_results/run$run_id
 
     fi
 
     date
-
-    echo Sleeping for 5 seconds . .
-    sleep 5
 
 }
 
