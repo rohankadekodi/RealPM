@@ -91,9 +91,6 @@ void performExperiment(int operation, uint32_t datasize, int seq, char *buf, int
 
             if(seq == 0)
                 offset = r;
-
-            if (sbuf.st_size == 0 && i > 0 && i % 10 == 0)
-                fsync(fd);
         }
     }
 
